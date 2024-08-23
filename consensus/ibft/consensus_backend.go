@@ -161,9 +161,10 @@ func (i *backendIBFT) buildBlock(parent *types.Header) (*types.Block, error) {
 	header := &types.Header{
 		ParentHash: parent.Hash,
 		Number:     parent.Number + 1,
-		Miner:      types.ZeroAddress.Bytes(),
-		Nonce:      types.Nonce{},
-		MixHash:    signer.IstanbulDigest,
+		//Miner:      types.ZeroAddress.Bytes(),
+		Miner:   i.currentSigner.Address().Bytes(),
+		Nonce:   types.Nonce{},
+		MixHash: signer.IstanbulDigest,
 		// this is required because blockchain needs difficulty to organize blocks and forks
 		Difficulty: parent.Number + 1,
 		StateRoot:  types.EmptyRootHash, // this avoids needing state for now
