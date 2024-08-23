@@ -112,6 +112,7 @@ func (i *backendIBFT) InsertBlock(
 		"validation_type", i.currentSigner.Type(),
 		"validators", i.currentValidators.Len(),
 		"committed", len(committedSeals),
+
 		"validated_by", hex.EncodeToHex(newBlock.Header.Miner),
 	)
 
