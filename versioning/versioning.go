@@ -7,8 +7,8 @@ var (
 	// Embedded by --ldflags on build time
 	// Versioning should follow the SemVer guidelines
 	// https://semver.org/
-	Version   string
-	Branch    string
-	Commit    string
-	BuildTime string
+	Version   string = "1.0.0"
+	Branch    string = "master"
+	Commit    string = ""
+	BuildTime string = "8/25/2024"
 )
