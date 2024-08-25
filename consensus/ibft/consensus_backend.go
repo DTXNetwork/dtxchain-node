@@ -102,7 +102,6 @@ func (i *backendIBFT) InsertBlock(
 
 		return
 	}
-
 	i.updateMetrics(newBlock)
 
 	i.logger.Info(
