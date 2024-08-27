@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	defaultMinGasPrice = "0x17b9aca00" // 100 gwei
+	defaultMinGasPrice = "0x746a528800" // 500 gwei
 )
 
 type ethTxPoolStore interface {
