@@ -5,11 +5,9 @@ import (
 	"os"
 
 	"github.com/Dtx-validator/dtx-node/command/backup"
-	"github.com/Dtx-validator/dtx-node/command/genesis"
 	"github.com/Dtx-validator/dtx-node/command/helper"
 	"github.com/Dtx-validator/dtx-node/command/ibft"
 	"github.com/Dtx-validator/dtx-node/command/license"
-	"github.com/Dtx-validator/dtx-node/command/loadbot"
 	"github.com/Dtx-validator/dtx-node/command/monitor"
 	"github.com/Dtx-validator/dtx-node/command/peers"
 	"github.com/Dtx-validator/dtx-node/command/secrets"
@@ -17,7 +15,6 @@ import (
 	"github.com/Dtx-validator/dtx-node/command/status"
 	"github.com/Dtx-validator/dtx-node/command/txpool"
 	"github.com/Dtx-validator/dtx-node/command/version"
-	"github.com/Dtx-validator/dtx-node/command/whitelist"
 	"github.com/spf13/cobra"
 )
 
@@ -47,12 +44,9 @@ func (rc *RootCommand) registerSubCommands() {
 		secrets.GetCommand(),
 		peers.GetCommand(),
 		monitor.GetCommand(),
-		loadbot.GetCommand(),
 		ibft.GetCommand(),
 		backup.GetCommand(),
-		genesis.GetCommand(),
 		server.GetCommand(),
-		whitelist.GetCommand(),
 		license.GetCommand(),
 	)
 }
